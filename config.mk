@@ -21,3 +21,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung_slsi-linaro/graphics \
     hardware/samsung_slsi-linaro/interfaces \
     hardware/samsung_slsi-linaro/openmax
+
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/samsung_slsi-linaro/graphics/base/legacy \
+    hardware/samsung_slsi-linaro/exynos/legacy/gralloc

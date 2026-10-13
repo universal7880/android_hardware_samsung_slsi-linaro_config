@@ -66,3 +66,5 @@ endif
 
 include hardware/samsung_slsi-linaro/config/hwc.mk
 include hardware/samsung_slsi-linaro/config/openmax.mk
+
+include hardware/samsung_slsi-linaro/config/legacy.mk
