@@ -228,7 +228,7 @@ else
 exynos_legacy_include_dirs += hardware/samsung_slsi-linaro/graphics/base/legacy/libhwc1/libvpphdmi hardware/samsung_slsi-linaro/exynos/kernel-$(TARGET_LINUX_KERNEL_VERSION)-headers
 endif
 ifeq ($(BOARD_USES_DUAL_DISPLAY),true)
-$(call soong_config_set,exynos_legacy,display_extra_srcs,:$(TARGET_SOC_BASE)_legacy_display_secondary_sources)
+$(call soong_config_set_string_list,exynos_legacy,display_extra_srcs,:$(TARGET_SOC_BASE)_legacy_display_secondary_sources)
 endif
 ifeq ($(BOARD_USES_VIRTUAL_DISPLAY),true)
 $(call soong_config_set,exynos_legacy,virtual_display,true)
@@ -244,7 +244,7 @@ endif
 ifneq ($(BOARD_DISABLE_HWC_DEBUG),true)
 $(call soong_config_set,exynos_legacy,hwc_debug,true)
 endif
-$(call soong_config_set,exynos_legacy,include_dirs,$(strip $(exynos_legacy_include_dirs)))
+$(call soong_config_set_string_list,exynos_legacy,include_dirs,$(strip $(exynos_legacy_include_dirs)))
 endif
 
 ifeq ($(BOARD_USES_FIMGAPI_V5X),true)
@@ -279,6 +279,6 @@ exynos_legacy_gralloc_include_dirs := \
     hardware/samsung_slsi-linaro/exynos/legacy/include \
     hardware/samsung_slsi-linaro/exynos/include \
     hardware/samsung_slsi-linaro/exynos5/include
-$(call soong_config_set,exynos_legacy,gralloc_include_dirs,$(exynos_legacy_gralloc_include_dirs))
+$(call soong_config_set_string_list,exynos_legacy,gralloc_include_dirs,$(exynos_legacy_gralloc_include_dirs))
 endif
 endif
