@@ -201,7 +201,7 @@ ifeq ($(BOARD_EXYNOS_HWC_LEGACY_DECON), true)
 exynos_legacy_cflags += -DUSES_LEGACY_DECON
 endif
 
-$(call soong_config_set,exynos_legacy,cflags,$(strip $(exynos_legacy_cflags)))
+$(call soong_config_set_string_list,exynos_legacy,cflags,$(strip $(exynos_legacy_cflags)))
 endif
 
 ifeq ($(BOARD_HWC_VERSION),libhwc1)
@@ -273,7 +273,7 @@ endif
 ifeq ($(BOARD_USES_ALIGN_RESTRICTION),true)
 exynos_legacy_gralloc_cflags += -DGRALLOC_MSCL_ALIGN_RESTRICTION -DGRALLOC_10B_ALIGN_RESTRICTION
 endif
-$(call soong_config_set,exynos_legacy,gralloc_cflags,$(strip $(exynos_legacy_gralloc_cflags)))
+$(call soong_config_set_string_list,exynos_legacy,gralloc_cflags,$(strip $(exynos_legacy_gralloc_cflags)))
 exynos_legacy_gralloc_include_dirs := \
     $(BOARD_EXYNOS_GRALLOC_INCLUDE_DIR) \
     hardware/samsung_slsi-linaro/exynos/legacy/include \
