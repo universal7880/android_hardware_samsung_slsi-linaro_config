@@ -72,6 +72,8 @@ BOARD_VIRTUAL_DISPLAY_DISABLE_IDMA_G0 := false
 
 # LIBHWJPEG
 TARGET_USES_UNIVERSAL_LIBHWJPEG := true
+$(call soong_config_set,libhwjpeg,HWJPEG_ANDROID_VERSION,9)
+$(call soong_config_set,libhwjpeg,LIBHWJPEG_USES_V4L2,true)
 
 # FIMG2D
 BOARD_USES_SKIA_FIMGAPI := true
